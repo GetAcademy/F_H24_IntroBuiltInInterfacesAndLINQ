@@ -1,4 +1,6 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ.Demos
+﻿using IntroBuiltInInterfacesAndLINQ.Enumerables;
+
+namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
     internal class ImplementEnumerableAndEnumeratorDemo : IDemo
     {

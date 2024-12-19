@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace IntroBuiltInInterfacesAndLINQ
+namespace IntroBuiltInInterfacesAndLINQ.Enumerables
 {
     internal class DoublingNumberSequence : IEnumerable<int>, IEnumerator<int>
     {

@@ -1,5 +1,4 @@
-﻿using IntroBuiltInInterfacesAndLINQ;
-using IntroBuiltInInterfacesAndLINQ.Demos;
+﻿using IntroBuiltInInterfacesAndLINQ.Demos;
 
 
 const DemoName demoToRun = DemoName.Linq;
