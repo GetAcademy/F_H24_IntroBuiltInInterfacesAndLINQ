@@ -9,8 +9,5 @@ var allDemos = new DemoBuilder()
     .Add(DemoName.Enumerable, new ImplementEnumerableAndEnumeratorDemo())
     .Build();
 
+// Could this use LINQ as well?
 allDemos[demoToRun].Run();
-
-
-
-
