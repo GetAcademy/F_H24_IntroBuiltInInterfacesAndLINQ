@@ -1,6 +1,6 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ
+﻿namespace IntroBuiltInInterfacesAndLINQ.Utilities
 {
-    internal class NumberTools
+    internal static class NumberUtilities
     {
         public static bool IsBetween10And100(int number)
         {

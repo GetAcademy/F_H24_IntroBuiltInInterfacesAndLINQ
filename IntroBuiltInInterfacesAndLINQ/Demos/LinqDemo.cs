@@ -1,10 +1,10 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using IntroBuiltInInterfacesAndLINQ.Utilities;
 
-namespace IntroBuiltInInterfacesAndLINQ
+namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
-    internal class LinqDemo
+    internal class LinqDemo : IDemo
     {
-        public static void Run()
+        public void Run()
         {
             var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
             FilterDemo(numbers);
@@ -23,7 +23,7 @@ namespace IntroBuiltInInterfacesAndLINQ
 
         }
 
-        private static void SearchDemo(int[] numbers)
+        private void SearchDemo(int[] numbers)
         {
             // har numbers elementet 7
             var has7 = numbers.Contains(7);
@@ -33,7 +33,7 @@ namespace IntroBuiltInInterfacesAndLINQ
             var firstBelow10b = numbers.SingleOrDefault(n=>n<10);
         }
 
-        private static void CombinedDemo(int[] numbers)
+        private void CombinedDemo(int[] numbers)
         {
             // med variabler
             var tripledNumbers = numbers.Select(n => n * 3);
@@ -47,14 +47,14 @@ namespace IntroBuiltInInterfacesAndLINQ
                 .Sum();
         }
 
-        private static void AggregateDemo(int[] numbers)
+        private void AggregateDemo(int[] numbers)
         {
             var sum = numbers.Sum();
             var average = numbers.Average();
             var max = numbers.Max();
         }
 
-        private static void MappingDemo(int[] numbers)
+        private void MappingDemo(int[] numbers)
         {
             // mapping JS: numbers.map(n=>`<li>${n}</li>`)
 
@@ -68,7 +68,7 @@ namespace IntroBuiltInInterfacesAndLINQ
             var htmlB = string.Join("", htmlElements);
         }
 
-        private static void FilterDemo(int[] numbers)
+        private void FilterDemo(int[] numbers)
         {
             // filtrering JS: numbers.filter(n=>n> 10 && n<100)
 
@@ -84,7 +84,7 @@ namespace IntroBuiltInInterfacesAndLINQ
 
             // med LINQ - med lambda og uten
             var numbersBetween10And100b = numbers.Where(n => n is > 10 and < 100);
-            var numbersBetween10And100c = numbers.Where(NumberTools.IsBetween10And100);
+            var numbersBetween10And100c = numbers.Where(NumberUtilities.IsBetween10And100);
 
             // eksempel på at Where kan brukes på alt som implementerer IEnumerable
             var numberSequence = new DoublingNumberSequence(1, 1000);

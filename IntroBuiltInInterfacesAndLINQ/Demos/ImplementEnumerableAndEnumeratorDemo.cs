@@ -1,8 +1,8 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ
+﻿namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
-    internal class ImplementEnumerableAndEnumeratorDemo
+    internal class ImplementEnumerableAndEnumeratorDemo : IDemo
     {
-        public static void Run()
+        public void Run()
         {
             var ints1 = new List<int> { 1, 2, 3 };
             var ints2 = new int[] { 1, 2, 3 };

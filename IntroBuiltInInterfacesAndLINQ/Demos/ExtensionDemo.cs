@@ -1,8 +1,10 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ
+﻿using IntroBuiltInInterfacesAndLINQ.Extensions;
+
+namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
-    internal class ExtensionDemo
+    internal class ExtensionDemo : IDemo
     {
-        public static void Run()
+        public void Run()
         {
             var text = "Terje";
             var newText = text.Repeat(1000);

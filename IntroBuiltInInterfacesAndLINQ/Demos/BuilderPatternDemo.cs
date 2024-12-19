@@ -1,8 +1,8 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ
+﻿namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
-    internal class BuilderPatternDemo
+    internal class BuilderPatternDemo : IDemo
     {
-        public static void Run()
+        public void Run()
         {
             // Uten builder pattern
             var drawing = new CharacterDrawing(20, 20);

@@ -1,8 +1,8 @@
 ﻿using System.Text;
 
-namespace IntroBuiltInInterfacesAndLINQ
+namespace IntroBuiltInInterfacesAndLINQ.Extensions
 {
-    internal static class StringTools
+    internal static class StringExtensions
     {
         public static string Repeat(this string text, int count)
         {
