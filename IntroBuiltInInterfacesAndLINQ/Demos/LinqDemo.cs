@@ -1,26 +1,41 @@
-﻿using IntroBuiltInInterfacesAndLINQ.Utilities;
+﻿using IntroBuiltInInterfacesAndLINQ.Models;
+using IntroBuiltInInterfacesAndLINQ.Utilities;
 
 namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
-    internal class LinqDemo : IDemo
+    public class LinqDemo : IDemo
     {
+        private IEnumerable<Student> _students = StudentGenerator.GenerateStudents();
         public void Run()
         {
-            var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
-            FilterDemo(numbers);
-            MappingDemo(numbers);
-            CombinedDemo(numbers);
-            // mapping, projeksjon
-            // reversering
-            var reversedNumbers = numbers.Reverse();
-            // sortering
-            var orderedNumbers = numbers.OrderBy(n => n);
-            // gruppering
-            // aggregeringer: sum, gjennomsnitt, antall
-            AggregateDemo(numbers);
-            // søk: er elementet med? finn elementet
-            SearchDemo(numbers);
+            
+            // Find all students above a certain age?
+            // Find all students in Trondheim?
+            // Find the first enrolled student?
+            // Find by id?
+            // Average age?
 
+      
+            // var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
+            // FilterDemo(numbers);
+            // MappingDemo(numbers);
+            // CombinedDemo(numbers);
+            // // mapping, projeksjon
+            // // reversering
+            // var reversedNumbers = numbers.Reverse();
+            // // sortering
+            // var orderedNumbers = numbers.OrderBy(n => n);
+            // // gruppering
+            // // aggregeringer: sum, gjennomsnitt, antall
+            // AggregateDemo(numbers);
+            // // søk: er elementet med? finn elementet
+            // SearchDemo(numbers);
+
+        }
+
+        private IEnumerable<Student> FilterStudentsByMinimumAge(int minimumAge)
+        {
+            return _students.Where(student => student.Age >= minimumAge);
         }
 
         private void SearchDemo(int[] numbers)

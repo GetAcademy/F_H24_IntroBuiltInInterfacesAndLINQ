@@ -1,8 +1,7 @@
-﻿namespace IntroBuiltInInterfacesAndLINQ;
+﻿namespace IntroBuiltInInterfacesAndLINQ.Demos;
 
 public enum DemoName
 {
-    BuilderPattern,
     Extension,
     Linq,
     Enumerable
