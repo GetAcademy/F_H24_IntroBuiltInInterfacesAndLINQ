@@ -16,7 +16,10 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
             // Find by id?
             // Average age?
             // Cities with most students?
+            // Are there any students from Sandefjord?
+            // Students in "random" order?
 
+            var asdasd = "";
 
             var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
             // FilterDemo(numbers);
