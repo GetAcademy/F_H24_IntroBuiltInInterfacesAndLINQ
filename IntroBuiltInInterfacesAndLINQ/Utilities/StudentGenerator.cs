@@ -2,7 +2,7 @@
 
 namespace IntroBuiltInInterfacesAndLINQ.Utilities;
 
-public static class StudentGenerator
+internal static class StudentGenerator
 {
     public static IEnumerable<Student> GenerateStudents()
     {

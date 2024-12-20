@@ -7,17 +7,18 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
     public class LinqDemo : IDemo
     {
         private IEnumerable<Student> _students = StudentGenerator.GenerateStudents();
+
         public void Run()
         {
-            
             // Find all students above a certain age?
             // Find all students in Trondheim?
             // Find the first enrolled student?
             // Find by id?
             // Average age?
+            // Cities with most students?
 
-      
-            // var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
+
+            var numbers = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
             // FilterDemo(numbers);
             // MappingDemo(numbers);
             // CombinedDemo(numbers);
@@ -30,13 +31,7 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
             // // aggregeringer: sum, gjennomsnitt, antall
             // AggregateDemo(numbers);
             // // søk: er elementet med? finn elementet
-            // SearchDemo(numbers);
-
-        }
-
-        private IEnumerable<Student> FilterStudentsByMinimumAge(int minimumAge)
-        {
-            return _students.Where(student => student.Age >= minimumAge);
+            SearchDemo(numbers);
         }
 
         private void SearchDemo(int[] numbers)
@@ -45,8 +40,8 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
             var has7 = numbers.Contains(7);
             var hasBelow10 = numbers.Any(n => n < 10);
 
-            var firstBelow10a = numbers.FirstOrDefault(n=>n<10);
-            var firstBelow10b = numbers.SingleOrDefault(n=>n<10);
+            var firstBelow10a = numbers.FirstOrDefault(n => n < 10);
+            var firstBelow10b = numbers.SingleOrDefault(n => n < 10);
         }
 
         private void CombinedDemo(int[] numbers)
