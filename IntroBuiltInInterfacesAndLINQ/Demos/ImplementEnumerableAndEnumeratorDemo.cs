@@ -4,6 +4,8 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
     internal class ImplementEnumerableAndEnumeratorDemo : IDemo
     {
+        public DemoName Name => DemoName.Enumerable;
+
         public void Run()
         {
             var ints1 = new List<int> { 1, 2, 3 };

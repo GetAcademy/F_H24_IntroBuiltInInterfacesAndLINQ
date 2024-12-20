@@ -4,6 +4,8 @@ namespace IntroBuiltInInterfacesAndLINQ.Demos
 {
     internal class ExtensionDemo : IDemo
     {
+        public DemoName Name => DemoName.Extension;
+
         public void Run()
         {
             var text = "Terje";

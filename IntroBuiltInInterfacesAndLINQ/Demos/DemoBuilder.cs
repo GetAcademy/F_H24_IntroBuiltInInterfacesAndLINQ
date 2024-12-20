@@ -4,13 +4,13 @@ public class DemoBuilder
 {
     private readonly Dictionary<DemoName, IDemo> _demos = new();
     
-    public DemoBuilder Add(DemoName demoName, IDemo demo)
+    public DemoBuilder Add<T>() where T : IDemo, new()
     {
-        _demos.Add(demoName, demo);
+        var demo = new T();
+        _demos.Add(demo.Name, demo);
         
         return this;
     }
     
     public Dictionary<DemoName, IDemo> Build() => _demos;
-    
 }
